@@ -150,8 +150,8 @@ CREATE TABLE employee (
 -- ------------------------
 CREATE TABLE insurance_provider (
     insurance_provider_id int,
-    contact_details int,
-    coverage_limit int,
+    contact_details bigint,
+    coverage_limit bigint,
     provider_name nvarchar(MAX),
     provider_type nvarchar(MAX)
 );
