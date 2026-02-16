@@ -14,8 +14,8 @@ CREATE TABLE admission (
     ward_id int,
     bed_id int,
     disease_id int,
-    admission_date DATETIME,
-    discharge_date DATETIME,
+    admission_date nvarchar(MAX),
+    discharge_date nvarchar(MAX),
     admission_type nvarchar(MAX),
     admission_status nvarchar(MAX)
 );
@@ -39,7 +39,7 @@ CREATE TABLE billing (
     insurance_covered_amount float,
     patient_payable_amount float,
     admission_id int,
-    bill_date DATETIME,
+    bill_date nvarchar(MAX),
     payment_status nvarchar(MAX),
     payment_mode nvarchar(MAX)
 );
@@ -118,7 +118,7 @@ CREATE TABLE drug_inventory (
     reorder_level int,
     drug_id int,
     inventory_status nvarchar(MAX),
-    last_restock_date DATETIME
+    last_restock_date nvarchar(MAX)
 );
 
 -- ------------------------
@@ -142,7 +142,7 @@ CREATE TABLE employee (
     gender nvarchar(MAX),
     role nvarchar(MAX),
     employment_type nvarchar(MAX),
-    date_of_joining DATETIME
+    date_of_joining nvarchar(MAX)
 );
 
 -- ------------------------
@@ -162,7 +162,7 @@ CREATE TABLE insurance_provider (
 CREATE TABLE patient (
     patient_id int,
     gender nvarchar(MAX),
-    date_of_birth DATETIME,
+    date_of_birth nvarchar(MAX),
     blood_group nvarchar(MAX),
     city nvarchar(MAX),
     contact_number nvarchar(MAX)
@@ -176,7 +176,7 @@ CREATE TABLE patient_diagnostic (
     admission_id int,
     test_id int,
     doctor_id int,
-    test_date DATETIME,
+    test_date nvarchar(MAX),
     result_status nvarchar(MAX)
 );
 
@@ -189,8 +189,8 @@ CREATE TABLE patient_insurance (
     patient_id int,
     insurance_provider_id int,
     policy_number nvarchar(MAX),
-    policy_start_date DATETIME,
-    policy_end_date DATETIME
+    policy_start_date nvarchar(MAX),
+    policy_end_date nvarchar(MAX)
 );
 
 -- ------------------------
@@ -225,6 +225,7 @@ CREATE TABLE ward (
     ward_name nvarchar(MAX),
     ward_type nvarchar(MAX)
 );
+
 
 -- ------------------------
 -- Table: equipment_maintenance
