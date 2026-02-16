@@ -114,7 +114,8 @@ CREATE TABLE dim_insurance_provider (
     insurance_provider_id INT,
     provider_name NVARCHAR(100),
     provider_type NVARCHAR(50),
-    coverage_limit DECIMAL(12,2)
+    coverage_limit INT,
+    contact_details BIGINT
 );
 
 CREATE TABLE dim_patient_insurance (
